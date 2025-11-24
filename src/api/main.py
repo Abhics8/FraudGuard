@@ -9,6 +9,14 @@ from pathlib import Path
 from .schemas import TransactionRequest, PredictionResponse, HealthResponse, ModelInfoResponse
 from ..utils import settings, logger
 from ..explainability import ModelExplainer
+from ..monitoring.metrics import (
+    track_prediction_metrics,
+    get_metrics,
+    update_model_status,
+    predictions_total,
+    CONTENT_TYPE_LATEST
+)
+from prometheus_client import CONTENT_TYPE_LATEST
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -39,8 +47,12 @@ async def load_model():
             feature_names = list(range(30))  # Placeholder
             explainer = ModelExplainer(model, feature_names)
             logger.info("SHAP explainer initialized")
+            update_model_status(True)
+        else:
+            update_model_status(False)
     except Exception as e:
         logger.error(f"Failed to load model: {e}")
+        update_model_status(False)
 
 
 @app.get("/", tags=["Health"])
@@ -64,6 +76,7 @@ async def health_check():
 
 
 @app.post("/predict", response_model=PredictionResponse, tags=["Predictions"])
+@track_prediction_metrics
 async def predict_fraud(transaction: TransactionRequest):
     """
     Predict if a transaction is fraudulent.
@@ -193,6 +206,17 @@ async def get_model_info():
         features_count=30,  # Base features
         threshold=settings.threshold
     )
+
+
+@app.get("/metrics", tags=["Monitoring"])
+async def metrics():
+    """
+    Prometheus metrics endpoint.
+    
+    Returns metrics in Prometheus format for scraping.
+    """
+    from starlette.responses import Response
+    return Response(content=get_metrics(), media_type=CONTENT_TYPE_LATEST)
 
 
 if __name__ == "__main__":

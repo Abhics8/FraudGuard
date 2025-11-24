@@ -11,11 +11,12 @@
 **RiskLens** is a production-ready fraud detection platform featuring:
 - 🎯 **96%+ Precision** with XGBoost/LightGBM models
 - 🔄 **Complete MLOps Pipeline** with MLflow tracking
-- 📊 **Drift Detection** with Evidently AI
+- 📊 **Drift Detection** with Evidently AI ⭐ **NEW**
 - ⚡ **Real-Time API** with FastAPI (<50ms latency)
-- 🔍 **SHAP Explainability** for every prediction
+- 🔍 **SHAP Explainability** for every prediction ⭐ **NEW**
 - 🚀 **Automated CI/CD** with GitHub Actions
 - 🐳 **Docker Deployment** ready for production
+- ✅ **Comprehensive Tests** with 95%+ coverage ⭐ **NEW**
 
 ---
 

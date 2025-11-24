@@ -75,6 +75,19 @@
 
 ---
 
+## 🌐 Live Demo
+
+**🚀 Deployed Application**: Coming soon!
+
+Once deployed, you can access:
+- **API Docs**: https://risklens.up.railway.app/docs
+- **Health Check**: https://risklens.up.railway.app/health
+- **Metrics**: https://risklens.up.railway.app/metrics
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for deployment instructions.
+
+---
+
 ## 💻 Usage
 
 ### Training Models

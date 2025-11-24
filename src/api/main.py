@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .schemas import TransactionRequest, PredictionResponse, HealthResponse, ModelInfoResponse
 from ..utils import settings, logger
+from ..explainability import ModelExplainer
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -19,18 +20,25 @@ app = FastAPI(
 # Global model instance
 model = None
 feature_engineer = None
+explainer = None
 
 
 @app.on_event("startup")
 async def load_model():
     """Load model on startup."""
-    global model, feature_engineer
+    global model, feature_engineer, explainer
     
     try:
         # In production, load from MLflow model registry
         # For now, using placeholder
         logger.info("Model loading: Using trained model from MLflow...")
         logger.info("API ready for predictions")
+        
+        # Initialize explainer if model is loaded
+        if model is not None:
+            feature_names = list(range(30))  # Placeholder
+            explainer = ModelExplainer(model, feature_names)
+            logger.info("SHAP explainer initialized")
     except Exception as e:
         logger.error(f"Failed to load model: {e}")
 
@@ -135,6 +143,41 @@ async def predict_batch(transactions: list[TransactionRequest]):
         
     except Exception as e:
         logger.error(f"Batch prediction error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/explain", tags=["Predictions"])
+async def explain_prediction(transaction: TransactionRequest):
+    """
+    Explain a fraud prediction using SHAP values.
+    
+    Returns top contributing features and their impact.
+    """
+    if model is None or explainer is None:
+        raise HTTPException(status_code=503, detail="Model or explainer not loaded")
+    
+    try:
+        # Convert to DataFrame
+        transaction_dict = transaction.dict()
+        df = pd.DataFrame([transaction_dict])
+        
+        # Apply feature engineering
+        if feature_engineer:
+            df = feature_engineer.transform(df)
+        
+        # Get explanation
+        explanation = explainer.explain_prediction(df, top_k=10)
+        readable_explanation = explainer.explain_local(df)
+        
+        return {
+            "prediction": explanation['prediction_value'],
+            "base_value": explanation['base_value'],
+            "top_features": explanation['top_features'],
+            "explanation_text": readable_explanation
+        }
+        
+    except Exception as e:
+        logger.error(f"Explanation error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 

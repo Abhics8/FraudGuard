@@ -79,7 +79,7 @@ def predict_fraud(amount, time_of_day, v1, v2, v3):
 
 
 # Create Gradio interface
-with gr.Blocks(title="RiskLens - Fraud Detection", theme=gr.themes.Soft()) as demo:
+with gr.Blocks(title="RiskLens - Fraud Detection") as demo:
     gr.Markdown("""
     # 🔍 RiskLens - AI Fraud Detection System
     

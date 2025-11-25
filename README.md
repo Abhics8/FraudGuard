@@ -77,14 +77,11 @@
 
 ## 🌐 Live Demo
 
-**🚀 Deployed Application**: Coming soon!
+**🚀 Deployed Application**: [https://huggingface.co/spaces/AB0202000/RiskLens](https://huggingface.co/spaces/AB0202000/RiskLens)
 
-Once deployed, you can access:
-- **API Docs**: https://risklens.up.railway.app/docs
-- **Health Check**: https://risklens.up.railway.app/health
-- **Metrics**: https://risklens.up.railway.app/metrics
+Interactive fraud detection demo running on Hugging Face Spaces.
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for deployment instructions.
+**Note**: The live demo uses a lightweight Gradio interface. For the full FastAPI production environment with metrics and MLflow, see the [Deployment Guide](DEPLOYMENT.md) to run locally or on cloud providers.
 
 ---
 

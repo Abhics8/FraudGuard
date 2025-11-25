@@ -125,7 +125,7 @@ graph TD
 
 **🚀 Fraud Detection API**: [https://huggingface.co/spaces/AB0202000/RiskLens](https://huggingface.co/spaces/AB0202000/RiskLens)
 
-**💰 Business Dashboard**: [https://share.streamlit.io/AB0204/RiskLens](https://share.streamlit.io/AB0204/RiskLens)
+**💰 Business Dashboard**: [https://risklens-pkut6xkwhua7dmugegejum.streamlit.app](https://risklens-pkut6xkwhua7dmugegejum.streamlit.app)
 
 Interactive fraud detection demo running on Hugging Face Spaces and Streamlit Cloud.
 

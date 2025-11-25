@@ -125,7 +125,7 @@ graph TD
 
 **🚀 Fraud Detection API**: [https://huggingface.co/spaces/AB0202000/FraudGuard](https://huggingface.co/spaces/AB0202000/FraudGuard)
 
-**💰 Business Dashboard**: [https://fraudguard-pkut6xkwhua7dmugegejum.streamlit.app](https://fraudguard-pkut6xkwhua7dmugegejum.streamlit.app)
+**💰 Business Dashboard**: [https://risklens-pkut6xkwhua7dmugegejum.streamlit.app](https://risklens-pkut6xkwhua7dmugegejum.streamlit.app)
 
 Interactive fraud detection demo running on Hugging Face Spaces and Streamlit Cloud.
 

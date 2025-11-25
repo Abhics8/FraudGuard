@@ -43,7 +43,7 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=false
     volumes:
       - grafana-storage:/var/lib/grafana
-      - ./monitoring/grafana_dashboard.json:/etc/grafana/provisioning/dashboards/risklens.json
+      - ./monitoring/grafana_dashboard.json:/etc/grafana/provisioning/dashboards/fraudguard.json
     depends_on:
       - prometheus
 

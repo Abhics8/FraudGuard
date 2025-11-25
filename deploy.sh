@@ -8,7 +8,7 @@ if [ -z "$1" ]; then
 fi
 
 USERNAME=$1
-SPACE_URL="https://huggingface.co/spaces/$USERNAME/RiskLens"
+SPACE_URL="https://huggingface.co/spaces/$USERNAME/FraudGuard"
 
 echo "🚀 Preparing to deploy to: $SPACE_URL"
 
@@ -23,7 +23,7 @@ git clone $SPACE_URL .
 # Check if clone was successful
 if [ ! -d ".git" ]; then
     echo "❌ Error: Could not clone repository."
-    echo "Make sure you have created the Space 'RiskLens' on Hugging Face first!"
+    echo "Make sure you have created the Space 'FraudGuard' on Hugging Face first!"
     echo "Create it here: https://huggingface.co/new-space"
     exit 1
 fi
@@ -37,7 +37,7 @@ cp ../requirements_hf.txt ./requirements.txt
 # 4. Push to Hugging Face
 echo "fw Pushing to Hugging Face..."
 git add .
-git commit -m "Deploy RiskLens via script"
+git commit -m "Deploy FraudGuard via script"
 git push
 
 echo "✅ Deployment complete!"

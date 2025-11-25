@@ -1,4 +1,4 @@
-"""Data loading utilities for RiskLens."""
+"""Data loading utilities for FraudGuard."""
 
 import pandas as pd
 from pathlib import Path

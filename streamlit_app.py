@@ -7,15 +7,15 @@ from src.business.cost_analysis import CostCalculator
 
 # Page Config
 st.set_page_config(
-    page_title="RiskLens Business Dashboard",
+    page_title="FraudGuard Business Dashboard",
     page_icon="💰",
     layout="wide"
 )
 
 # Title
-st.title("💰 RiskLens: Business Impact Analysis")
+st.title("💰 FraudGuard: Business Impact Analysis")
 st.markdown("""
-This dashboard visualizes the **financial impact** of the RiskLens fraud detection model.
+This dashboard visualizes the **financial impact** of the FraudGuard fraud detection model.
 Adjust the cost parameters in the sidebar to see how they affect Net Monetary Value (NMV) and ROI.
 """)
 

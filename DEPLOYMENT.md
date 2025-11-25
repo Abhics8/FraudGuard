@@ -1,4 +1,4 @@
-# RiskLens Deployment Guide
+# FraudGuard Deployment Guide
 
 ## 🚀 Deploy to Railway (Recommended)
 
@@ -13,13 +13,13 @@ Railway offers free tier with Docker support - perfect for ML projects!
 #### 1. Push to GitHub
 
 ```bash
-cd /Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/RiskLens
+cd /Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/FraudGuard
 
 # Create GitHub repository at https://github.com/new
-# Name: RiskLens
+# Name: FraudGuard
 
 # Then push:
-git remote add origin https://github.com/AB0204/RiskLens.git
+git remote add origin https://github.com/AB0204/FraudGuard.git
 git branch -M main
 git push -u origin main
 ```
@@ -29,7 +29,7 @@ git push -u origin main
 1. **Go to Railway**: https://railway.app
 2. **Sign in with GitHub**
 3. **Create New Project** → **Deploy from GitHub repo**
-4. **Select** `AB0204/RiskLens`
+4. **Select** `AB0204/FraudGuard`
 5. **Add Variables**:
    - Click "Variables" tab
    - Add: `PORT=8000`
@@ -38,7 +38,7 @@ git push -u origin main
 6. **Deploy!**
    - Railway auto-detects Dockerfile
    - Build starts automatically
-   - Get your URL: `https://risklens-production.up.railway.app`
+   - Get your URL: `https://fraudguard-production.up.railway.app`
 
 #### 3. Test Deployment
 
@@ -60,9 +60,9 @@ curl -X POST https://your-app.up.railway.app/predict \
 
 1. **Go to Render**: https://render.com
 2. **New Web Service**
-3. **Connect GitHub** → Select `RiskLens`
+3. **Connect GitHub** → Select `FraudGuard`
 4. **Configure**:
-   - Name: `risklens`
+   - Name: `fraudguard`
    - Environment: `Docker`
    - Instance Type: `Free`
    - Environment Variables:
@@ -70,7 +70,7 @@ curl -X POST https://your-app.up.railway.app/predict \
      - `MLFLOW_TRACKING_URI=sqlite:///mlflow.db`
 
 5. **Deploy**
-   - URL: `https://risklens.onrender.com`
+   - URL: `https://fraudguard.onrender.com`
 
 ---
 
@@ -109,12 +109,12 @@ ENABLE_MONITORING=True
 ### Add to Resume/Portfolio
 
 ```markdown
-**RiskLens** - Production Fraud Detection System
-- Deployed at https://risklens.up.railway.app
+**FraudGuard** - Production Fraud Detection System
+- Deployed at https://fraudguard.up.railway.app
 - 96%+ precision fraud detection with XGBoost
 - MLOps pipeline with drift detection
 - Real-time API with <50ms latency
-- GitHub: https://github.com/AB0204/RiskLens
+- GitHub: https://github.com/AB0204/FraudGuard
 ```
 
 ---
@@ -193,4 +193,4 @@ Tools for recording:
 
 ---
 
-**You're ready to deploy! Let's make RiskLens publicly accessible!** 🚀
+**You're ready to deploy! Let's make FraudGuard publicly accessible!** 🚀

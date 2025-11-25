@@ -1,4 +1,4 @@
-# Deploy RiskLens to Hugging Face Spaces
+# Deploy FraudGuard to Hugging Face Spaces
 
 ## 🚀 Quick Deploy Guide
 
@@ -11,7 +11,7 @@
 1. Go to https://huggingface.co/new-space
 2. Fill in details:
    - **Owner**: Your username
-   - **Space name**: `RiskLens`
+   - **Space name**: `FraudGuard`
    - **License**: MIT
    - **Select SDK**: **Gradio**
    - **Space hardware**: **CPU basic** (free tier)
@@ -47,7 +47,7 @@ Watch the **"Build logs"** - when you see ✅ "Running on public URL", you're li
 
 Your app is now live at:
 ```
-https://huggingface.co/spaces/YOUR_USERNAME/RiskLens
+https://huggingface.co/spaces/YOUR_USERNAME/FraudGuard
 ```
 
 ---
@@ -55,15 +55,15 @@ https://huggingface.co/spaces/YOUR_USERNAME/RiskLens
 ## 📝 Files to Upload
 
 ### File 1: `app.py`
-Location: `/Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/RiskLens/app.py`
+Location: `/Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/FraudGuard/app.py`
 
 ### File 2: `README.md` 
 Upload: `README_HF.md` as `README.md`
-Location: `/Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/RiskLens/README_HF.md`
+Location: `/Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/FraudGuard/README_HF.md`
 
 ### File 3: `requirements.txt`
 Upload: `requirements_hf.txt` as `requirements.txt`
-Location: `/Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/RiskLens/requirements_hf.txt`
+Location: `/Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/FraudGuard/requirements_hf.txt`
 
 ---
 
@@ -75,7 +75,7 @@ Location: `/Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/Ri
 
 ### Update GitHub README
 ```bash
-cd /Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/RiskLens
+cd /Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/FraudGuard
 # Edit README.md - replace live demo section with your HF URL
 git add README.md
 git commit -m "docs: Add Hugging Face Spaces live demo"
@@ -96,4 +96,4 @@ git push origin main
 
 Your fraud detection demo is now **live and free** on Hugging Face Spaces!
 
-**Example URL**: https://huggingface.co/spaces/AB0204/RiskLens
+**Example URL**: https://huggingface.co/spaces/AB0204/FraudGuard

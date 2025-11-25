@@ -1,8 +1,8 @@
 {
     "dashboard": {
-        "title": "RiskLens - Fraud Detection Monitoring",
+        "title": "FraudGuard - Fraud Detection Monitoring",
         "tags": [
-            "risklens",
+            "fraudguard",
             "fraud-detection",
             "ml"
         ],
@@ -13,7 +13,7 @@
                 "type": "graph",
                 "targets": [
                     {
-                        "expr": "rate(risklens_api_requests_total[5m])",
+                        "expr": "rate(fraudguard_api_requests_total[5m])",
                         "legendFormat": "{{method}} {{endpoint}} - {{status}}"
                     }
                 ],
@@ -29,7 +29,7 @@
                 "type": "graph",
                 "targets": [
                     {
-                        "expr": "histogram_quantile(0.95, rate(risklens_api_request_duration_seconds_bucket[5m]))",
+                        "expr": "histogram_quantile(0.95, rate(fraudguard_api_request_duration_seconds_bucket[5m]))",
                         "legendFormat": "{{endpoint}}"
                     }
                 ],
@@ -45,7 +45,7 @@
                 "type": "graph",
                 "targets": [
                     {
-                        "expr": "rate(risklens_predictions_total[1m]) * 60",
+                        "expr": "rate(fraudguard_predictions_total[1m]) * 60",
                         "legendFormat": "{{prediction_type}}"
                     }
                 ],
@@ -61,7 +61,7 @@
                 "type": "singlestat",
                 "targets": [
                     {
-                        "expr": "rate(risklens_fraud_detected_total[5m])"
+                        "expr": "rate(fraudguard_fraud_detected_total[5m])"
                     }
                 ],
                 "gridPos": {
@@ -76,7 +76,7 @@
                 "type": "heatmap",
                 "targets": [
                     {
-                        "expr": "rate(risklens_fraud_probability_bucket[5m])"
+                        "expr": "rate(fraudguard_fraud_probability_bucket[5m])"
                     }
                 ],
                 "gridPos": {
@@ -91,15 +91,15 @@
                 "type": "graph",
                 "targets": [
                     {
-                        "expr": "histogram_quantile(0.50, rate(risklens_prediction_latency_seconds_bucket[5m]))",
+                        "expr": "histogram_quantile(0.50, rate(fraudguard_prediction_latency_seconds_bucket[5m]))",
                         "legendFormat": "p50"
                     },
                     {
-                        "expr": "histogram_quantile(0.95, rate(risklens_prediction_latency_seconds_bucket[5m]))",
+                        "expr": "histogram_quantile(0.95, rate(fraudguard_prediction_latency_seconds_bucket[5m]))",
                         "legendFormat": "p95"
                     },
                     {
-                        "expr": "histogram_quantile(0.99, rate(risklens_prediction_latency_seconds_bucket[5m]))",
+                        "expr": "histogram_quantile(0.99, rate(fraudguard_prediction_latency_seconds_bucket[5m]))",
                         "legendFormat": "p99"
                     }
                 ],
@@ -115,7 +115,7 @@
                 "type": "singlestat",
                 "targets": [
                     {
-                        "expr": "risklens_model_loaded"
+                        "expr": "fraudguard_model_loaded"
                     }
                 ],
                 "valueMaps": [
@@ -140,7 +140,7 @@
                 "type": "singlestat",
                 "targets": [
                     {
-                        "expr": "risklens_data_drift_detected"
+                        "expr": "fraudguard_data_drift_detected"
                     }
                 ],
                 "valueMaps": [
@@ -165,7 +165,7 @@
                 "type": "gauge",
                 "targets": [
                     {
-                        "expr": "risklens_drift_share"
+                        "expr": "fraudguard_drift_share"
                     }
                 ],
                 "gridPos": {

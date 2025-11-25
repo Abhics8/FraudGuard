@@ -2,26 +2,26 @@
 
 ## 🎯 Overview
 
-RiskLens includes comprehensive monitoring with **Prometheus** metrics and **Grafana** dashboards.
+FraudGuard includes comprehensive monitoring with **Prometheus** metrics and **Grafana** dashboards.
 
 ## 📊 Metrics Tracked
 
 ### API Metrics
-- **risklens_api_requests_total** - Total API requests by method, endpoint, and status
-- **risklens_api_request_duration_seconds** - Request latency histogram
+- **fraudguard_api_requests_total** - Total API requests by method, endpoint, and status
+- **fraudguard_api_request_duration_seconds** - Request latency histogram
 
 ### Prediction Metrics
-- **risklens_predictions_total** - Total predictions made
-- **risklens_fraud_detected_total** - Fraud cases detected
-- **risklens_fraud_probability** - Distribution of fraud probabilities
-- **risklens_prediction_latency_seconds** - Model inference latency
+- **fraudguard_predictions_total** - Total predictions made
+- **fraudguard_fraud_detected_total** - Fraud cases detected
+- **fraudguard_fraud_probability** - Distribution of fraud probabilities
+- **fraudguard_prediction_latency_seconds** - Model inference latency
 
 ### Model Metrics
-- **risklens_model_loaded** - Model status (loaded/not loaded)
+- **fraudguard_model_loaded** - Model status (loaded/not loaded)
 
 ### Drift Metrics
-- **risklens_data_drift_detected** - Data drift detected (yes/no)
-- **risklens_drift_share** - Share of drifted features
+- **fraudguard_data_drift_detected** - Data drift detected (yes/no)
+- **fraudguard_drift_share** - Share of drifted features
 
 ## 🚀 Quick Start
 
@@ -85,15 +85,15 @@ curl http://localhost:8000/metrics
 
 ```promql
 # API request rate
-rate(risklens_api_requests_total[5m])
+rate(fraudguard_api_requests_total[5m])
 
 # Average prediction latency
-rate(risklens_prediction_latency_seconds_sum[5m]) / 
-rate(risklens_prediction_latency_seconds_count[5m])
+rate(fraudguard_prediction_latency_seconds_sum[5m]) / 
+rate(fraudguard_prediction_latency_seconds_count[5m])
 
 # Fraud detection percentage
-rate(risklens_fraud_detected_total[5m]) / 
-rate(risklens_predictions_total[5m]) * 100
+rate(fraudguard_fraud_detected_total[5m]) / 
+rate(fraudguard_predictions_total[5m]) * 100
 ```
 
 ## 🚨 Alerting (Coming Soon)
@@ -112,7 +112,7 @@ Add custom metrics in `src/monitoring/metrics.py`:
 from prometheus_client import Counter
 
 custom_metric = Counter(
-    'risklens_custom_metric',
+    'fraudguard_custom_metric',
     'Description of metric',
     ['label1', 'label2']
 )

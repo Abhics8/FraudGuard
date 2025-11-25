@@ -1,4 +1,4 @@
-"""Utility functions for RiskLens."""
+"""Utility functions for FraudGuard."""
 
 from .config import settings, get_settings
 from .logging import setup_logger, logger

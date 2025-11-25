@@ -1,4 +1,4 @@
-"""Gradio interface for RiskLens fraud detection."""
+"""Gradio interface for FraudGuard fraud detection."""
 
 import gradio as gr
 import pandas as pd
@@ -79,16 +79,16 @@ def predict_fraud(amount, time_of_day, v1, v2, v3):
 
 
 # Create Gradio interface
-with gr.Blocks(title="RiskLens - Fraud Detection") as demo:
+with gr.Blocks(title="FraudGuard - Fraud Detection") as demo:
     gr.Markdown("""
-    # 🔍 RiskLens - AI Fraud Detection System
+    # 🔍 FraudGuard - AI Fraud Detection System
     
     **Production-ready fraud detection with MLOps pipeline**
     
     Detect fraudulent credit card transactions using machine learning.
     This demo uses simplified heuristics - the full system uses XGBoost with 96%+ precision.
     
-    [GitHub Repository](https://github.com/AB0204/RiskLens) | [Documentation](https://github.com/AB0204/RiskLens/blob/main/README.md)
+    [GitHub Repository](https://github.com/AB0204/FraudGuard) | [Documentation](https://github.com/AB0204/FraudGuard/blob/main/README.md)
     """)
     
     with gr.Row():
@@ -172,9 +172,9 @@ with gr.Blocks(title="RiskLens - Fraud Detection") as demo:
     gr.Markdown("""
     ---
     
-    ## 🚀 About RiskLens
+    ## 🚀 About FraudGuard
     
-    RiskLens is a production-grade fraud detection system featuring:
+    FraudGuard is a production-grade fraud detection system featuring:
     - 🎯 96%+ Precision with XGBoost/LightGBM
     - 🔄 Complete MLOps Pipeline with MLflow tracking
     - 📊 Drift Detection with Evidently AI
@@ -184,7 +184,7 @@ with gr.Blocks(title="RiskLens - Fraud Detection") as demo:
     
     **Tech Stack:** Python, FastAPI, XGBoost, MLflow, Evidently AI, SHAP, Prometheus, Docker
     
-    Built by [Abhi Bhardwaj](https://github.com/AB0204) | [View Source Code](https://github.com/AB0204/RiskLens)
+    Built by [Abhi Bhardwaj](https://github.com/AB0204) | [View Source Code](https://github.com/AB0204/FraudGuard)
     """)
 
 # Launch the app

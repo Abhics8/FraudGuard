@@ -1,4 +1,4 @@
-"""Training script for RiskLens fraud detection."""
+"""Training script for FraudGuard fraud detection."""
 
 import sys
 from pathlib import Path
@@ -13,7 +13,7 @@ from src.utils import logger, settings
 
 def main():
     """Main training function."""
-    logger.info("Starting RiskLens training pipeline...")
+    logger.info("Starting FraudGuard training pipeline...")
     
     # Load data
     try:
@@ -52,7 +52,7 @@ def main():
         y_train,
         X_val_transformed,
         y_val,
-        experiment_name="RiskLens-Fraud-Detection"
+        experiment_name="FraudGuard-Fraud-Detection"
     )
     
     # Final evaluation on test set
@@ -78,7 +78,7 @@ def main():
         y_train,
         X_val_transformed,
         y_val,
-        experiment_name="RiskLens-Fraud-Detection"
+        experiment_name="FraudGuard-Fraud-Detection"
     )
     
     lgb_test_metrics = lgb_detector.evaluate(X_test_transformed, y_test, prefix="test")

@@ -1,4 +1,4 @@
-"""Configuration management for RiskLens fraud detection system."""
+"""Configuration management for FraudGuard fraud detection system."""
 
 import os
 from pathlib import Path
@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     api_host: str = "0.0.0.0"
     api_port: int = 8000
     api_workers: int = 4
-    api_title: str = "RiskLens API"
+    api_title: str = "FraudGuard API"
     api_version: str = "1.0.0"
     
     # Model

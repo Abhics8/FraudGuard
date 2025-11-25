@@ -1,4 +1,4 @@
-🚀 Just deployed my latest MLOps project: RiskLens!
+🚀 Just deployed my latest MLOps project: FraudGuard!
 
 I built a production-grade Fraud Detection System that processes transactions in real-time with 96% precision.
 
@@ -11,7 +11,7 @@ I built a production-grade Fraud Detection System that processes transactions in
 
 The system is containerized with Docker and deployed on Hugging Face Spaces.
 
-👉 Try the live demo: https://huggingface.co/spaces/AB0202000/RiskLens
-💻 Check the code: https://github.com/AB0204/RiskLens
+👉 Try the live demo: https://huggingface.co/spaces/AB0202000/FraudGuard
+💻 Check the code: https://github.com/AB0204/FraudGuard
 
 #machinelearning #mlops #python #fastapi #datascience #frauddetection #opentowork

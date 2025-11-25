@@ -1,4 +1,4 @@
-# RiskLens 🔍
+# FraudGuard 🔍
 
 > Enterprise-grade fraud detection system with MLOps pipeline
 
@@ -8,7 +8,7 @@
 [![MLflow](https://img.shields.io/badge/MLflow-2.9+-0194E2.svg)](https://mlflow.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**RiskLens** is a production-ready fraud detection platform featuring:
+**FraudGuard** is a production-ready fraud detection platform featuring:
 - 🎯 **96%+ Precision** with XGBoost/LightGBM models
 - 🔄 **Complete MLOps Pipeline** with MLflow tracking
 - 📊 **Drift Detection** with Evidently AI ⭐ **NEW**
@@ -37,7 +37,7 @@
 
 **"96% Precision" translates to real money.**
 
-Using our **Cost Optimization Module**, we analyzed the financial impact of deploying RiskLens compared to a baseline rule-based system.
+Using our **Cost Optimization Module**, we analyzed the financial impact of deploying FraudGuard compared to a baseline rule-based system.
 
 *   **Net Monetary Value (NMV)**: Estimated **$2.4M annual savings** for a mid-sized fintech.
 *   **ROI**: **15x return** on operational costs (cloud infra + investigation team).
@@ -89,8 +89,8 @@ graph TD
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/AB0204/RiskLens.git
-   cd RiskLens
+   git clone https://github.com/AB0204/FraudGuard.git
+   cd FraudGuard
    ```
 
 2. **Set up virtual environment**
@@ -123,9 +123,9 @@ graph TD
 
 ## 🌐 Live Demo
 
-**🚀 Fraud Detection API**: [https://huggingface.co/spaces/AB0202000/RiskLens](https://huggingface.co/spaces/AB0202000/RiskLens)
+**🚀 Fraud Detection API**: [https://huggingface.co/spaces/AB0202000/FraudGuard](https://huggingface.co/spaces/AB0202000/FraudGuard)
 
-**💰 Business Dashboard**: [https://risklens-pkut6xkwhua7dmugegejum.streamlit.app](https://risklens-pkut6xkwhua7dmugegejum.streamlit.app)
+**💰 Business Dashboard**: [https://fraudguard-pkut6xkwhua7dmugegejum.streamlit.app](https://fraudguard-pkut6xkwhua7dmugegejum.streamlit.app)
 
 Interactive fraud detection demo running on Hugging Face Spaces and Streamlit Cloud.
 
@@ -216,7 +216,7 @@ curl -X POST "http://localhost:8000/predict/batch" \
 ## 🏗️ Architecture
 
 ```
-RiskLens/
+FraudGuard/
 ├── data/
 │   ├── raw/                          # Original dataset
 │   └── processed/                    # Processed features
@@ -325,10 +325,10 @@ docker-compose up --build
 
 ```bash
 # Build image
-docker build -t risklens:latest .
+docker build -t fraudguard:latest .
 
 # Run container
-docker run -p 8000:8000 risklens:latest
+docker run -p 8000:8000 fraudguard:latest
 ```
 
 ---
@@ -492,7 +492,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 **Abhi Bhardwaj** - [@AB0204](https://github.com/AB0204)
 
-Project Link: [https://github.com/AB0204/RiskLens](https://github.com/AB0204/RiskLens)
+Project Link: [https://github.com/AB0204/FraudGuard](https://github.com/AB0204/FraudGuard)
 
 LinkedIn: [abhi-bhardwaj-23b0961a0](https://www.linkedin.com/in/abhi-bhardwaj-23b0961a0/)
 
@@ -500,7 +500,7 @@ LinkedIn: [abhi-bhardwaj-23b0961a0](https://www.linkedin.com/in/abhi-bhardwaj-23
 
 ## ⭐ Show Your Support
 
-If you find RiskLens useful for your portfolio or learning, please consider giving it a ⭐ on GitHub!
+If you find FraudGuard useful for your portfolio or learning, please consider giving it a ⭐ on GitHub!
 
 ---
 

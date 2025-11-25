@@ -1,5 +1,5 @@
 ---
-title: RiskLens - Fraud Detection
+title: FraudGuard - Fraud Detection
 emoji: 🔍
 colorFrom: red
 colorTo: orange
@@ -10,7 +10,7 @@ pinned: false
 license: mit
 ---
 
-# RiskLens - AI Fraud Detection System
+# FraudGuard - AI Fraud Detection System
 
 🔍 **Production-ready fraud detection with MLOps pipeline**
 
@@ -46,9 +46,9 @@ The full production system uses:
 
 ## Links
 
-- [GitHub Repository](https://github.com/AB0204/RiskLens)
-- [Documentation](https://github.com/AB0204/RiskLens/blob/main/README.md)
-- [Deployment Guide](https://github.com/AB0204/RiskLens/blob/main/DEPLOYMENT.md)
+- [GitHub Repository](https://github.com/AB0204/FraudGuard)
+- [Documentation](https://github.com/AB0204/FraudGuard/blob/main/README.md)
+- [Deployment Guide](https://github.com/AB0204/FraudGuard/blob/main/DEPLOYMENT.md)
 
 ## Author
 

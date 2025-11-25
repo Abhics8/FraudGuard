@@ -7,55 +7,55 @@ from typing import Callable
 
 # API Metrics
 api_requests_total = Counter(
-    'risklens_api_requests_total',
+    'fraudguard_api_requests_total',
     'Total number of API requests',
     ['method', 'endpoint', 'status']
 )
 
 api_request_duration_seconds = Histogram(
-    'risklens_api_request_duration_seconds',
+    'fraudguard_api_request_duration_seconds',
     'API request duration in seconds',
     ['method', 'endpoint']
 )
 
 # Prediction Metrics
 predictions_total = Counter(
-    'risklens_predictions_total',
+    'fraudguard_predictions_total',
     'Total number of predictions made',
     ['prediction_type']
 )
 
 fraud_detected_total = Counter(
-    'risklens_fraud_detected_total',
+    'fraudguard_fraud_detected_total',
     'Total number of fraud cases detected'
 )
 
 fraud_probability_histogram = Histogram(
-    'risklens_fraud_probability',
+    'fraudguard_fraud_probability',
     'Distribution of fraud probabilities',
     buckets=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 )
 
 prediction_latency_seconds = Histogram(
-    'risklens_prediction_latency_seconds',
+    'fraudguard_prediction_latency_seconds',
     'Time taken for model prediction',
     buckets=[0.001, 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5]
 )
 
 # Model Metrics
 model_loaded = Gauge(
-    'risklens_model_loaded',
+    'fraudguard_model_loaded',
     'Whether model is loaded (1) or not (0)'
 )
 
 # Drift Metrics
 data_drift_detected = Gauge(
-    'risklens_data_drift_detected',
+    'fraudguard_data_drift_detected',
     'Whether data drift is detected (1) or not (0)'
 )
 
 drift_share = Gauge(
-    'risklens_drift_share',
+    'fraudguard_drift_share',
     'Share of drifted features'
 )
 

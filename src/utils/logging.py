@@ -1,4 +1,4 @@
-"""Logging configuration for RiskLens."""
+"""Logging configuration for FraudGuard."""
 
 import logging
 import sys
@@ -47,4 +47,4 @@ def setup_logger(name: str, log_file: Path | None = None, level: int = logging.I
 
 
 # Default logger
-logger = setup_logger("risklens")
+logger = setup_logger("fraudguard")

@@ -1,4 +1,4 @@
-"""FastAPI application for RiskLens fraud detection."""
+"""FastAPI application for FraudGuard fraud detection."""
 
 import pandas as pd
 from fastapi import FastAPI, HTTPException
@@ -59,7 +59,7 @@ async def load_model():
 async def root():
     """Root endpoint."""
     return {
-        "message": "Welcome to RiskLens API",
+        "message": "Welcome to FraudGuard API",
         "docs": "/docs",
         "health": "/health"
     }

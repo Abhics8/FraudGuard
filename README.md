@@ -123,9 +123,11 @@ graph TD
 
 ## 🌐 Live Demo
 
-**🚀 Deployed Application**: [https://huggingface.co/spaces/AB0202000/RiskLens](https://huggingface.co/spaces/AB0202000/RiskLens)
+**🚀 Fraud Detection API**: [https://huggingface.co/spaces/AB0202000/RiskLens](https://huggingface.co/spaces/AB0202000/RiskLens)
 
-Interactive fraud detection demo running on Hugging Face Spaces.
+**💰 Business Dashboard**: [https://share.streamlit.io/AB0204/RiskLens](https://share.streamlit.io/AB0204/RiskLens)
+
+Interactive fraud detection demo running on Hugging Face Spaces and Streamlit Cloud.
 
 **Note**: The live demo uses a lightweight Gradio interface. For the full FastAPI production environment with metrics and MLflow, see the [Deployment Guide](DEPLOYMENT.md) to run locally or on cloud providers.
 

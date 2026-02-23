@@ -10,7 +10,7 @@
 
 [🚀 Live Demo](https://risklens-pkut6xkwhua7dmugegejum.streamlit.app) | [📊 API Demo](https://huggingface.co/spaces/AB0202000/FraudGuard) | [💼 Portfolio](https://ab0204.github.io/Portfolio/)
 
-![FraudGuard Dashboard](https://via.placeholder.com/800x400/1a1a2e/16213e?text=FraudGuard+Dashboard+Screenshot)
+![FraudGuard Dashboard](assets/fraudguard-dashboard.png)
 
 ---
 

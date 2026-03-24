@@ -24,8 +24,6 @@
 | Precision | **96.2%** (40% better than baseline) |
 | AUC-ROC | **0.982** |
 | API Latency | **<50ms** P95 |
-| Throughput | **10,000+ req/sec** |
-| Annual Savings | **$2.4M** (mid-sized institution) |
 | Test Coverage | **95%+** |
 | Model Retraining | Automatic when precision drops below 90% |
 
@@ -93,7 +91,7 @@ Financial fraud costs businesses **$42 billion annually** in the US alone, with 
 - **Performance Monitoring** - Real-time model degradation alerts (<90% baseline triggers retraining)
 
 ### 📊 **Production-Ready Infrastructure**
-- **Scalable API** - FastAPI microservice handling 10,000+ requests/second
+- **Scalable API** - FastAPI microservice with async inference pipeline
 - **CI/CD Pipeline** - Automated testing, Docker builds, and deployment workflows
 - **Data Drift Detection** - Statistical tests (KS, PSI) with automated alerting
 - **Explainability** - SHAP values for regulatory compliance and investigation support
@@ -222,7 +220,7 @@ False Positive Rate: 3.8% (vs. 15% baseline)
 ### **System Performance**
 ```
 API Latency:        <50ms (p95)
-Throughput:         10,000+ requests/second
+Throughput:         High (async FastAPI + batched inference)
 Model Training:     15 minutes (full pipeline)
 Inference Time:     12ms average per prediction
 Uptime:            99.7% (last 90 days)

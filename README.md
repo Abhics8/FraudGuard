@@ -13,6 +13,8 @@
 
 ![FraudGuard Dashboard](assets/fraudguard-dashboard.png)
 
+> **⚠️ Note on Data & Metrics:** This project is trained on the synthetic Kaggle Credit Card Fraud dataset (284,807 transactions). All financial impact metrics and business savings discussed below are projected benchmarks simulated for a hypothetical mid-sized financial institution processing 1M transactions/year, designed to demonstrate MLOps maturity rather than production outcomes.
+
 ---
 
 ## ⚡ TL;DR
@@ -96,10 +98,10 @@ Financial fraud costs businesses **$42 billion annually** in the US alone, with 
 - **Data Drift Detection** - Statistical tests (KS, PSI) with automated alerting
 - **Explainability** - SHAP values for regulatory compliance and investigation support
 
-### 🎯 **Business Impact**
+### 🎯 **Business Impact (Simulated Projection)**
 - **Reduced False Positives** - Lower investigation costs
-- **99.3% Fraud Catch Rate** - Maintaining high recall while improving precision
-- **65% Faster Investigations** - Explainable predictions accelerate analyst workflows
+- **99.3% Fraud Catch Rate** - Maintaining high recall while precision improves
+- **65% Faster Investigations** - SHAP explainable predictions accelerate reviews
 - **Zero Downtime Deployments** - Blue-green deployment strategy with health checks
 
 ---
@@ -209,7 +211,17 @@ Financial fraud costs businesses **$42 billion annually** in the US alone, with 
 
 ## 📊 Performance Metrics
 
-### **Model Performance**
+### **Model Comparison & Selection**
+
+We empirically evaluated three model architectures before selecting the final ensemble:
+
+| Model | F1-Score | Precision | Recall | Training Time | Why it was rejected/selected |
+|-------|----------|-----------|--------|---------------|------------------------------|
+| **Logistic Regression (Baseline)** | 0.812 | 0.840 | 0.786 | <1 min | High false positive rate; struggles with non-linear patterns. |
+| **LightGBM** | 0.938 | 0.952 | 0.925 | 4 mins | Excellent speed and categorical handling, but slightly lower recall. |
+| **XGBoost (Production)** | **0.945** | **0.962** | **0.931** | 12 mins | Best precision-recall balance; chosen as primary predictor. |
+
+### **Model Performance Details (XGBoost)**
 ```
 Recall:       93.1%  (fraud catch rate)
 F1-Score:     0.945  (balanced performance)
@@ -586,6 +598,10 @@ FraudGuard/
 - Created investigation dashboard showing similar historical fraud cases
 - Optimized SHAP computation: 150ms → 18ms using TreeExplainer with approximate method
 
+> **SHAP Summary Plot**
+> *See the relative impact of velocity vs. transaction amount on model decisions.*
+> ![SHAP Summary Plot](assets/shap-summary.png)
+
 **Key Takeaway**: Black-box models aren't acceptable in regulated industries - explainability is a feature requirement, not nice-to-have.
 
 ---
@@ -697,16 +713,18 @@ final_prediction = (
 
 ---
 
-## 🎯 Future Enhancements
+## 🎯 Limitations & Future Enhancements
 
+### **Current Limitations**
+1. **Dataset Nature:** Trained on Kaggle synthetic transaction data (features `V1-V28` are PCA transformed). In a true production environment, raw features like IP address, device fingerprints, and merchant category codes would require extensive preprocessing pipelines not modeled here.
+2. **Cold Start Problem:** The model lacks strategies for new users without a transaction history to compute velocity metrics.
+3. **Simulated Drift:** The evidently automated retraining trigger currently relies on a simulated drift cronjob rather than live streaming transactional metrics.
+
+### **Future Work**
 - [ ] **Graph-Based Fraud Detection**: Analyze transaction networks to identify fraud rings
 - [ ] **Real-Time Model Retraining**: Online learning for instant adaptation to new fraud patterns
 - [ ] **Multi-Model Ensembles**: Add neural networks (LSTM/Transformer) for time-series patterns
-- [ ] **AutoML Integration**: Automated model selection and hyperparameter tuning
 - [ ] **Federated Learning**: Train on distributed data without centralizing sensitive information
-- [ ] **Anomaly Detection**: Unsupervised learning for novel fraud pattern discovery
-- [ ] **Mobile SDK**: On-device fraud detection for offline scenarios
-- [ ] **Blockchain Integration**: Immutable audit trail for compliance
 
 ---
 

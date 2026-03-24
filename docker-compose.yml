@@ -13,6 +13,11 @@ services:
     volumes:
       - ./data:/app/data
       - ./models:/app/models
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
   
   mlflow:
     image: ghcr.io/mlflow/mlflow:latest
@@ -22,6 +27,11 @@ services:
     volumes:
       - ./mlruns:/mlruns
       - ./mlflow.db:/mlflow.db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
   
   prometheus:
     image: prom/prometheus:latest
@@ -33,6 +43,11 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yml'
     depends_on:
       - api
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:9090/-/healthy"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
   
   grafana:
     image: grafana/grafana:latest
@@ -46,6 +61,11 @@ services:
       - ./monitoring/grafana_dashboard.json:/etc/grafana/provisioning/dashboards/fraudguard.json
     depends_on:
       - prometheus
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
 volumes:
   grafana-storage:

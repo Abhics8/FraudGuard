@@ -96,4 +96,4 @@ git push origin main
 
 Your fraud detection demo is now **live and free** on Hugging Face Spaces!
 
-**Example URL**: https://huggingface.co/spaces/AB0204/FraudGuard
+**Example URL**: https://huggingface.co/spaces/Ab0202000/FraudGuard

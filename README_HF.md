@@ -46,14 +46,14 @@ The full production system uses:
 
 ## Links
 
-- [GitHub Repository](https://github.com/AB0204/FraudGuard)
-- [Documentation](https://github.com/AB0204/FraudGuard/blob/main/README.md)
-- [Deployment Guide](https://github.com/AB0204/FraudGuard/blob/main/DEPLOYMENT.md)
+- [GitHub Repository](https://github.com/Abhics8/FraudGuard)
+- [Documentation](https://github.com/Abhics8/FraudGuard/blob/main/README.md)
+- [Deployment Guide](https://github.com/Abhics8/FraudGuard/blob/main/DEPLOYMENT.md)
 
 ## Author
 
 **Abhi Bhardwaj**
-- GitHub: [@AB0204](https://github.com/AB0204)
+- GitHub: [@Abhics8](https://github.com/Abhics8)
 - LinkedIn: [abhi-bhardwaj](https://www.linkedin.com/in/abhi-bhardwaj-23b0961a0/)
 
 ---

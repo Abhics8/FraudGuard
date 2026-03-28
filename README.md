@@ -5,11 +5,11 @@
 [![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat&logo=mlflow&logoColor=white)](https://mlflow.org/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/AB0204/FraudGuard/actions/workflows/python-tests.yml/badge.svg)](https://github.com/AB0204/FraudGuard/actions)
+[![Build Status](https://github.com/Abhics8/FraudGuard/actions/workflows/python-tests.yml/badge.svg)](https://github.com/Abhics8/FraudGuard/actions)
 
 > **Production-grade fraud detection system with complete MLOps pipeline**
 
-[🚀 Live Demo](https://risklens-pkut6xkwhua7dmugegejum.streamlit.app) | [📊 API Demo](https://huggingface.co/spaces/AB0202000/FraudGuard) | [💼 Portfolio](https://ab0204.github.io/Portfolio/)
+[🚀 Live Demo](https://risklens-pkut6xkwhua7dmugegejum.streamlit.app) | [📊 API Demo](https://huggingface.co/spaces/AB0202000/FraudGuard) | [💼 Portfolio](https://abhics8.github.io/Portfolio)
 
 ![FraudGuard Dashboard](assets/fraudguard-dashboard.png)
 
@@ -789,7 +789,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Abhi Bhardwaj** — MS Computer Science, George Washington University (May 2026)
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-ab0204.github.io-1B2A4A)](https://ab0204.github.io/Portfolio/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-abhics8.github.io-1B2A4A)](https://abhics8.github.io/Portfolio)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin)](https://www.linkedin.com/in/abhi-bhardwaj-23b0961a0/)
 [![GitHub](https://img.shields.io/badge/GitHub-Abhics8-181717?logo=github)](https://github.com/Abhics8)
 

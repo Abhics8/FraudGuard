@@ -19,7 +19,7 @@ cd /Users/abhiabhardwaj/.gemini/antigravity/playground/fractal-hubble/FraudGuard
 # Name: FraudGuard
 
 # Then push:
-git remote add origin https://github.com/AB0204/FraudGuard.git
+git remote add origin https://github.com/Abhics8/FraudGuard.git
 git branch -M main
 git push -u origin main
 ```
@@ -29,7 +29,7 @@ git push -u origin main
 1. **Go to Railway**: https://railway.app
 2. **Sign in with GitHub**
 3. **Create New Project** → **Deploy from GitHub repo**
-4. **Select** `AB0204/FraudGuard`
+4. **Select** `Abhics8/FraudGuard`
 5. **Add Variables**:
    - Click "Variables" tab
    - Add: `PORT=8000`
@@ -114,7 +114,7 @@ ENABLE_MONITORING=True
 - 96%+ precision fraud detection with XGBoost
 - MLOps pipeline with drift detection
 - Real-time API with <50ms latency
-- GitHub: https://github.com/AB0204/FraudGuard
+- GitHub: https://github.com/Abhics8/FraudGuard
 ```
 
 ---

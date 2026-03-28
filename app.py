@@ -88,7 +88,7 @@ with gr.Blocks(title="FraudGuard - Fraud Detection") as demo:
     Detect fraudulent credit card transactions using machine learning.
     This demo uses simplified heuristics - the full system uses XGBoost with 96%+ precision.
     
-    [GitHub Repository](https://github.com/AB0204/FraudGuard) | [Documentation](https://github.com/AB0204/FraudGuard/blob/main/README.md)
+    [GitHub Repository](https://github.com/Abhics8/FraudGuard) | [Documentation](https://github.com/Abhics8/FraudGuard/blob/main/README.md)
     """)
     
     with gr.Row():
@@ -184,7 +184,7 @@ with gr.Blocks(title="FraudGuard - Fraud Detection") as demo:
     
     **Tech Stack:** Python, FastAPI, XGBoost, MLflow, Evidently AI, SHAP, Prometheus, Docker
     
-    Built by [Abhi Bhardwaj](https://github.com/AB0204) | [View Source Code](https://github.com/AB0204/FraudGuard)
+    Built by [Abhi Bhardwaj](https://github.com/Abhics8) | [View Source Code](https://github.com/Abhics8/FraudGuard)
     """)
 
 # Launch the app

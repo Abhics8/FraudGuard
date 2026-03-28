@@ -12,6 +12,6 @@ I built a production-grade Fraud Detection System that processes transactions in
 The system is containerized with Docker and deployed on Hugging Face Spaces.
 
 👉 Try the live demo: https://huggingface.co/spaces/AB0202000/FraudGuard
-💻 Check the code: https://github.com/AB0204/FraudGuard
+💻 Check the code: https://github.com/Abhics8/FraudGuard
 
 #machinelearning #mlops #python #fastapi #datascience #frauddetection #opentowork
